@@ -2,7 +2,6 @@ import Vue from 'vue'
 import './style.scss'
 
 import moment from 'moment-timezone'
-
 moment.tz.setDefault('Europe/Paris')
 moment.locale('fr')
 moment.locale('en', null)
@@ -18,5 +17,6 @@ new Vue({
   
   components: {
     App
-  }
+  },
+  
 });
