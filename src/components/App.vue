@@ -22,6 +22,7 @@
                 <calendar-day v-for="day in week" :key="day.id" :day="day"></calendar-day>
             </div>
         </div>
+        <event-form></event-form>
     </div>
 </template>
 <script>
@@ -29,6 +30,7 @@ import { moment } from 'moment-timezone'
 import store from '../store/index.js'
 import CalendarDay from './CalendarDay.vue'
 import CurrentMonth from './CurrentMonth.vue'
+import EventForm from './EventForm.vue'
 export default {
     data() {
         return {
@@ -90,7 +92,8 @@ export default {
   },
   components: {
       CurrentMonth,
-      CalendarDay
+      CalendarDay,
+      EventForm
   },
   mounted(){
       console.log(this.$store)
