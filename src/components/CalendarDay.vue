@@ -23,16 +23,19 @@ export default {
             }
         },
         events(){
-            return this.$store.state.events.filter(e => e.date === this.day._d,)
+            //return this.$store.state.events.filter(e => e.date.isSame(this.day, 'day'))
+            return this.$store.state.events.filter(e => e.date === this.day._d)
         }
     },
     methods: {
         openEvent(event) {
+            console.log('EVENT TO BE OPENED', event)
             this.$store.commit('SET_EVENT_POS', event)
             this.$store.commit('OPEN_EVENT')
-            this.$store.commit('ATTRIBUTE_DATE', this.day._d)
+            this.$store.commit('ATTRIBUTE_DATE', this.day)
         }
-    }
+    },
+    
 }
 </script>
 <style>
