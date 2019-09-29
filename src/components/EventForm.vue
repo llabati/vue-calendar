@@ -33,10 +33,7 @@ export default {
             this.$store.commit('CLOSE_EVENT')
         },
         create(){
-            this.$store.commit('CREATE_NEW_EVENT', this.description)
-            let input = this.$refs.description
-            console.log(input)
-            input.value = ''
+            this.$store.dispatch('createNewEvent', this.description)
             this.description = ''
             this.$store.commit('CLOSE_EVENT')
         }
