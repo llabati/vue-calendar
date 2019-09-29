@@ -32,11 +32,7 @@ import CalendarDay from './CalendarDay.vue'
 import CurrentMonth from './CurrentMonth.vue'
 import EventForm from './EventForm.vue'
 export default {
-    data() {
-        return {
-           
-        }
-  },
+    
   store,
   computed: {
       year(){
@@ -95,9 +91,7 @@ export default {
       CalendarDay,
       EventForm
   },
-  mounted(){
-      console.log(this.$store)
-  }
+  
 }
 </script>
 <style lang="scss">
